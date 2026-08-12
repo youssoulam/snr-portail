@@ -1,10 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { MapPin, Maximize2, Tag } from "lucide-react";
 import { properties } from "@/data/content";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { ThemeIllustration } from "@/components/ui/ThemeIllustration";
+
+const focalByType = {
+  vente: "center 40%",
+  location: "center center",
+} as const;
 
 export function PropertiesSection() {
   return (
@@ -29,15 +34,18 @@ export function PropertiesSection() {
               className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-snr-blue-500/5"
             >
               <div className="relative h-52 overflow-hidden">
-                <Image
+                <ThemeIllustration
                   src={property.image}
                   alt={property.title}
                   fill
-                  className="object-cover transition duration-700 group-hover:scale-110"
+                  className="h-full w-full transition duration-700 group-hover:scale-105"
+                  imageClassName="transition duration-700 group-hover:scale-105"
+                  focal={focalByType[property.type]}
+                  overlay="dark"
+                  sizes="(max-width: 768px) 100vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                 <span
-                  className={`absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-bold uppercase ${
+                  className={`absolute left-3 top-3 z-10 rounded-full px-3 py-1 text-xs font-bold uppercase ${
                     property.type === "vente"
                       ? "bg-snr-gold-500 text-snr-blue-900"
                       : "bg-snr-blue-500 text-white"
@@ -46,12 +54,12 @@ export function PropertiesSection() {
                   {property.type}
                 </span>
                 {property.featured && (
-                  <span className="absolute right-3 top-3 rounded-full bg-snr-red-500 px-2.5 py-1 text-xs font-bold text-white">
+                  <span className="absolute right-3 top-3 z-10 rounded-full bg-snr-red-500 px-2.5 py-1 text-xs font-bold text-white">
                     À la une
                   </span>
                 )}
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="font-semibold text-white drop-shadow">
+                <div className="absolute bottom-4 left-4 right-4 z-10">
+                  <p className="font-semibold text-white drop-shadow-md">
                     {property.title}
                   </p>
                 </div>
