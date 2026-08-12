@@ -141,7 +141,7 @@ export const heroSlides = [
     highlight: "SENGHOR, DG de la SNR",
     description:
       "Banquier et juriste, le nouveau Directeur général insuffle une dynamique de modernisation et de recouvrement efficace des créances publiques.",
-    image: "/images/dg-pape-ibrahima-senghor.jpg",
+    image: "/images/dg-pape-ibrahima-senghor.png",
     cta: { label: "Lire le mot du DG", href: "#mot-dg" },
     ctaSecondary: { label: "La SNR", href: "#apropos" },
   },
@@ -166,7 +166,7 @@ export const announcements: Announcement[] = [
       "Nommé par le Président Bassirou Diomaye Faye lors du Conseil des ministres du 29 juillet 2026, il succède à Babacar NDIAYE.",
     date: "2026-07-29",
     category: "institutionnel",
-    image: "/images/dg-pape-ibrahima-senghor.jpg",
+    image: "/images/dg-pape-ibrahima-senghor.png",
   },
   {
     id: "2",
@@ -339,7 +339,7 @@ export const dgMessage = {
   name: "Pape Ibrahima SENGHOR",
   title: "Directeur Général",
   role: "Société Nationale de Recouvrement",
-  photo: "/images/dg-pape-ibrahima-senghor.jpg",
+  photo: "/images/dg-pape-ibrahima-senghor.png",
   appointedDate: "29 juillet 2026",
   bio: "Banquier de formation et titulaire d'une Maîtrise en droit des affaires. Nommé Directeur général de la SNR par le Président Bassirou Diomaye Faye lors du Conseil des ministres du 29 juillet 2026.",
   excerpt:

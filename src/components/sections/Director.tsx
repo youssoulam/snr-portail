@@ -24,13 +24,14 @@ export function DirectorSection() {
             </h2>
 
             <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-              <div className="relative aspect-[4/3] w-full">
+              <div className="relative aspect-[3/4] w-full bg-snr-blue-700">
                 <Image
                   src={dgMessage.photo}
-                  alt={dgMessage.name}
+                  alt={`Portrait officiel de ${dgMessage.name}, Directeur Général de la SNR`}
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
                 />
               </div>
               <div className="p-6">
