@@ -13,15 +13,16 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <SnrLogo size={44} />
+              <SnrLogo height={44} />
               <div>
-                <p className="font-display text-lg font-bold">
-                  {siteConfig.shortName}
-                </p>
+                <p className="font-display text-lg font-bold">SNR</p>
                 <p className="text-xs text-white/60">snr.gouv.sn</p>
               </div>
             </div>
-            <p className="text-sm leading-relaxed text-white/70">
+            <p className="mt-4 text-xs font-semibold tracking-widest text-snr-gold-400">
+              {siteConfig.baseline}
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-white/70">
               {siteConfig.tagline}
             </p>
             <div className="flex gap-3">

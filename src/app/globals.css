@@ -6,9 +6,9 @@
 
 @layer base {
   :root {
-    --snr-blue: #0072b9;
-    --snr-blue-dark: #003057;
-    --snr-gold: #ed8b1c;
+    --snr-blue: #1a2b48;
+    --snr-blue-dark: #101a2a;
+    --snr-gold: #c59325;
     --snr-red: #da001a;
   }
 
@@ -34,7 +34,6 @@
   }
 }
 
-/* Bande tricolore sénégalaise — accent institutionnel */
 .senegal-stripe {
   height: 3px;
   background: linear-gradient(

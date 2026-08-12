@@ -4,8 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { ImageOff } from "lucide-react";
 
-const FALLBACK_IMAGE =
-  "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80";
+const FALLBACK_IMAGE = "/images/snr-accueil-officiel.jpg";
 
 interface GalleryImageProps {
   src: string;

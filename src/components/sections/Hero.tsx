@@ -1,6 +1,7 @@
 "use client";
 
 import { Shield, TrendingUp, Users } from "lucide-react";
+import { siteConfig } from "@/data/content";
 
 export { HeroSlider } from "./HeroSlider";
 
@@ -37,9 +38,10 @@ export function AboutSection() {
             <p className="mt-6 text-lg leading-relaxed text-gray-600">
               Créée en 1991, la Société Nationale de Recouvrement est une
               société d&apos;État chargée du recouvrement des créances de
-              l&apos;État et de la gestion de son patrimoine immobilier. Elle
-              joue un rôle central dans la mobilisation des ressources
-              publiques.
+              l&apos;État et de la gestion de son patrimoine immobilier.
+            </p>
+            <p className="mt-3 text-sm font-semibold tracking-widest text-snr-gold-600">
+              {siteConfig.baseline}
             </p>
             <p className="mt-4 text-lg leading-relaxed text-gray-600">
               Dans le cadre de la transformation digitale du Sénégal, la SNR

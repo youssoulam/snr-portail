@@ -64,3 +64,14 @@ export interface HeroSlide {
   cta: { label: string; href: string };
   ctaSecondary?: { label: string; href: string };
 }
+
+export interface DirectorMessage {
+  name: string;
+  title: string;
+  role: string;
+  photo: string;
+  appointedDate: string;
+  excerpt: string;
+  content: string;
+  bio: string;
+}

@@ -10,31 +10,29 @@ const config: Config = {
     extend: {
       colors: {
         snr: {
-          /* Bleu institutionnel SNR — couleur principale (logo, texte SNR) */
+          /* Bleu marine — couleur principale du nouveau logo SNR */
           blue: {
-            50: "#E8F4FC",
-            100: "#C5E4F7",
-            200: "#8FC9EF",
-            300: "#59ADE4",
-            400: "#2E91D4",
-            500: "#0072B9",
-            600: "#005A94",
-            700: "#004470",
-            800: "#003057",
-            900: "#001D33",
+            50: "#EEF1F7",
+            100: "#D5DCE8",
+            200: "#A8B8D0",
+            300: "#7A94B8",
+            400: "#4D70A0",
+            500: "#1A2B48",
+            600: "#152238",
+            700: "#101A2A",
+            800: "#0B121C",
+            900: "#060A10",
           },
-          /* Orange/Doré — carte du Sénégal dans le logo SNR */
+          /* Or / ambre — accent du logo (R stylisé, séparateur, baseline) */
           gold: {
-            400: "#F5A623",
-            500: "#ED8B1C",
-            600: "#C9740F",
+            400: "#D4A84B",
+            500: "#C59325",
+            600: "#A67A1E",
           },
-          /* Rouge — accent (drapeau national, éléments d'alerte) */
           red: {
             500: "#DA001A",
             600: "#B00015",
           },
-          /* Vert sénégalais — accent institutionnel secondaire */
           senegal: {
             green: "#00853F",
             yellow: "#FDEF42",

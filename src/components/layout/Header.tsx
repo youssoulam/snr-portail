@@ -60,15 +60,7 @@ export function Header() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-3">
-            <SnrLogo size={48} className="shrink-0 drop-shadow-sm transition group-hover:scale-105" />
-            <div className="hidden sm:block">
-              <p className="font-display text-lg font-bold leading-tight text-snr-blue-700">
-                {siteConfig.shortName}
-              </p>
-              <p className="text-xs text-gray-500">
-                Société Nationale de Recouvrement
-              </p>
-            </div>
+            <SnrLogo height={48} className="transition group-hover:opacity-90" />
           </Link>
 
           {/* Desktop nav */}

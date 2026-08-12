@@ -12,6 +12,7 @@ export const siteConfig = {
   name: "Société Nationale de Recouvrement",
   shortName: "SNR",
   tagline: "Un instrument efficace de recouvrement au service de l'État",
+  baseline: "RIGUEUR • CONFIANCE • PERFORMANCE",
   description:
     "La SNR assure le recouvrement des créances de l'État du Sénégal et la gestion du patrimoine immobilier public.",
   url: "https://snr.gouv.sn",
@@ -113,15 +114,14 @@ export const stats: Stat[] = [
 export const heroSlides = [
   {
     id: "1",
-    badge: "Institution publique — République du Sénégal",
+    badge: siteConfig.baseline,
     title: "Société Nationale de",
     highlight: "Recouvrement",
     description:
-      "Un instrument efficace de recouvrement au service de l'État. Modernisation, transparence et excellence au service des citoyens.",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80",
+      "Un instrument efficace de recouvrement au service de l'État. Rigueur, confiance et performance au service des citoyens sénégalais.",
+    image: "/images/snr-accueil-officiel.jpg",
     cta: { label: "Nos services", href: "#services" },
-    ctaSecondary: { label: "Nous contacter", href: "#contact" },
+    ctaSecondary: { label: "Mot du DG", href: "#mot-dg" },
   },
   {
     id: "2",
@@ -129,123 +129,112 @@ export const heroSlides = [
     title: "Immeubles proposés à la",
     highlight: "Vente & Location",
     description:
-      "Retrouvez tous les biens du patrimoine de l'État actuellement disponibles, avec transparence et procédures conformes.",
-    image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80",
+      "Retrouvez tous les biens du patrimoine de l'État actuellement disponibles, conformément aux avis publiés sur snr.gouv.sn.",
+    image: "/images/avis-vente-immeubles.jpg",
     cta: { label: "Consulter les immeubles", href: "#immeubles" },
     ctaSecondary: { label: "Voir les annonces", href: "#actualites" },
   },
   {
     id: "3",
+    badge: "Nomination — Conseil des ministres",
+    title: "Pape Ibrahima",
+    highlight: "SENGHOR, DG de la SNR",
+    description:
+      "Banquier et juriste, le nouveau Directeur général insuffle une dynamique de modernisation et de recouvrement efficace des créances publiques.",
+    image: "/images/dg-pape-ibrahima-senghor.jpg",
+    cta: { label: "Lire le mot du DG", href: "#mot-dg" },
+    ctaSecondary: { label: "La SNR", href: "#apropos" },
+  },
+  {
+    id: "4",
     badge: "E-Services citoyens",
     title: "Vos démarches",
     highlight: "100% en ligne",
     description:
       "Demandez vos attestations, suivez vos dossiers de recouvrement et accédez à nos services numériques en toute simplicité.",
-    image:
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920&q=80",
+    image: "/images/passation-service-snr.jpg",
     cta: { label: "Accéder aux E-Services", href: "#contact" },
     ctaSecondary: { label: "Documenthèque", href: "#documents" },
-  },
-  {
-    id: "4",
-    badge: "Transformation digitale",
-    title: "La SNR vers",
-    highlight: "l'avenir numérique",
-    description:
-      "Digitalisation des processus, renforcement des compétences et modernisation des outils au service de l'État sénégalais.",
-    image:
-      "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1920&q=80",
-    cta: { label: "Découvrir la SNR", href: "#apropos" },
-    ctaSecondary: { label: "Mot du DG", href: "#mot-dg" },
   },
 ];
 
 export const announcements: Announcement[] = [
   {
     id: "1",
-    title: "Avis de vente — Immeubles proposés à la vente Mars 2026",
+    title: "Nomination de Papa Ibrahima SENGHOR — Directeur Général de la SNR",
+    excerpt:
+      "Nommé par le Président Bassirou Diomaye Faye lors du Conseil des ministres du 29 juillet 2026, il succède à Babacar NDIAYE.",
+    date: "2026-07-29",
+    category: "institutionnel",
+    image: "/images/dg-pape-ibrahima-senghor.jpg",
+  },
+  {
+    id: "2",
+    title: "Avis de vente — Immeubles proposés à la vente",
     excerpt:
       "Consultez la liste des immeubles du patrimoine de l'État actuellement proposés à la vente aux enchères publiques.",
     date: "2026-03-01",
     category: "vente",
-    image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+    image: "/images/avis-vente-immeubles.jpg",
   },
   {
-    id: "2",
+    id: "3",
     title: "Passation de service entre Directeurs Généraux",
     excerpt:
       "Cérémonie officielle de passation de service marquant une nouvelle étape dans la modernisation de la SNR.",
     date: "2026-02-15",
     category: "institutionnel",
-    image:
-      "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80",
-  },
-  {
-    id: "3",
-    title: "Locations disponibles — Plateau & Almadies",
-    excerpt:
-      "Plusieurs locaux commerciaux et bureaux sont disponibles à la location dans les quartiers d'affaires de Dakar.",
-    date: "2026-02-01",
-    category: "location",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    image: "/images/passation-service-snr.jpg",
   },
   {
     id: "4",
-    title: "Journée internationale des femmes — SNR célèbre ses collaboratrices",
+    title: "Contribution de la SNR à la lutte contre le COVID-19",
     excerpt:
-      "La SNR a organisé une cérémonie en l'honneur de ses collaboratrices à l'occasion du 8 mars.",
-    date: "2026-03-08",
+      "La SNR a apporté sa contribution à l'effort national de lutte contre la pandémie de COVID-19.",
+    date: "2020-06-01",
     category: "social",
-    image:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80",
+    image: "/images/snr-covid19.jpg",
   },
 ];
 
 export const properties: Property[] = [
   {
     id: "1",
-    title: "Immeuble administratif — Plateau",
-    location: "Plateau, Dakar",
+    title: "Immeubles proposés à la vente",
+    location: "Dakar, Sénégal",
     type: "vente",
     price: "Sur enchères",
-    surface: "2 400 m²",
-    image:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
+    surface: "Voir avis de vente",
+    image: "/images/avis-vente-immeubles.jpg",
     featured: true,
   },
   {
     id: "2",
-    title: "Local commercial — Almadies",
-    location: "Almadies, Dakar",
+    title: "Patrimoine immobilier de l'État",
+    location: "Plateau & Almadies, Dakar",
     type: "location",
-    price: "1 500 000 FCFA/mois",
-    surface: "180 m²",
-    image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    price: "Sur demande",
+    surface: "Variable",
+    image: "/images/snr-accueil-officiel.jpg",
     featured: true,
   },
   {
     id: "3",
-    title: "Villa de fonction — Mermoz",
-    location: "Mermoz, Dakar",
+    title: "Biens immobiliers — Avis officiels SNR",
+    location: "Sénégal",
     type: "vente",
     price: "Sur enchères",
-    surface: "450 m²",
-    image:
-      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
+    surface: "Voir documenthèque",
+    image: "/images/passation-service-snr.jpg",
   },
   {
     id: "4",
-    title: "Bureau — Sicap Liberté",
-    location: "Sicap Liberté, Dakar",
+    title: "Locaux disponibles à la location",
+    location: "Dakar",
     type: "location",
-    price: "850 000 FCFA/mois",
-    surface: "95 m²",
-    image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80",
+    price: "Sur demande",
+    surface: "Variable",
+    image: "/images/avis-vente-immeubles.jpg",
   },
 ];
 
@@ -288,6 +277,12 @@ export const documents: Document[] = [
 
 export const formerDirectors: Director[] = [
   {
+    id: "0",
+    name: "Monsieur Babacar NDIAYE",
+    title: "Directeur Général",
+    period: "2019 — Juil. 2026",
+  },
+  {
     id: "1",
     name: "Maître Babacar DIALLO",
     title: "Avocat",
@@ -305,65 +300,57 @@ export const formerDirectors: Director[] = [
     title: "Directeur Général",
     period: "Avr. 2002 — Août 2012",
   },
-  {
-    id: "4",
-    name: "Monsieur François Lat COLLIN",
-    title: "Inspecteur Général d'État",
-    period: "Juil. 1999 — Avr. 2002",
-  },
 ];
 
 export const mediaGallery = [
   {
     id: "1",
     title: "Cérémonie de remise de chèque — Hôpital Diamniadio",
-    image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80",
+    image: "/images/don-hopital-diamniadio-hd.jpg",
   },
   {
     id: "2",
-    title: "Randonnée pédestre 2025 — SNR",
-    image:
-      "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&q=80",
+    title: "Randonnée pédestre 2018 — SNR",
+    image: "/images/randonnee-2018-hd.jpg",
   },
   {
     id: "3",
-    title: "Colonie de vacances — Enfants des agents SNR",
-    image:
-      "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&q=80",
+    title: "Randonnée pédestre 2018 — SNR (suite)",
+    image: "/images/randonnee-2018-suite-hd.jpg",
   },
   {
     id: "4",
-    title: "Formation continue des agents",
-    image:
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80",
+    title: "La SNR fête ses femmes — 8 mars 2018",
+    image: "/images/femmes-snr-2018-hd.jpg",
   },
   {
     id: "5",
-    title: "Team building SNR 2025",
-    image:
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80",
+    title: "Passation de service — SNR",
+    image: "/images/passation-service-snr.jpg",
   },
   {
     id: "6",
-    title: "Visite institutionnelle",
-    image:
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80",
+    title: "Contribution SNR — Lutte contre le COVID-19",
+    image: "/images/snr-covid19.jpg",
   },
 ];
 
 export const dgMessage = {
-  name: "Directeur Général",
-  title: "Société Nationale de Recouvrement",
+  name: "Pape Ibrahima SENGHOR",
+  title: "Directeur Général",
+  role: "Société Nationale de Recouvrement",
+  photo: "/images/dg-pape-ibrahima-senghor.jpg",
+  appointedDate: "29 juillet 2026",
+  bio: "Banquier de formation et titulaire d'une Maîtrise en droit des affaires. Nommé Directeur général de la SNR par le Président Bassirou Diomaye Faye lors du Conseil des ministres du 29 juillet 2026.",
   excerpt:
-    "Chers collaborateurs et amis internautes, la SNR s'engage dans une transformation numérique ambitieuse pour mieux servir l'État et les citoyens.",
+    "Chers collaborateurs et amis internautes, la SNR s'engage dans une nouvelle dynamique fondée sur la rigueur, la confiance et la performance.",
   content: `Chers collaborateurs et amis internautes,
 
-La Société Nationale de Recouvrement poursuit sa mission essentielle au service de l'État du Sénégal. Dans un contexte de transformation digitale accélérée, nous renouvelons notre engagement envers l'excellence, la transparence et l'innovation.
+C'est avec un profond sens des responsabilités que j'assume la direction générale de la Société Nationale de Recouvrement, institution stratégique au service de l'État du Sénégal.
 
-Notre vision pour les années à venir repose sur trois piliers fondamentaux : la modernisation de nos outils de recouvrement, la digitalisation de nos services aux usagers, et le renforcement des compétences de nos équipes.
+Fort de mon expérience bancaire et juridique, je m'engage à conduire la SNR vers une performance accrue dans le recouvrement des créances publiques, la transparence de nos actions et la modernisation de nos outils au bénéfice des citoyens.
 
-Ce nouveau portail web s'inscrit dans cette dynamique. Il reflète notre volonté de vous offrir un accès simplifié à l'information, à nos services en ligne et à la gestion transparente du patrimoine de l'État.
+Notre devise — Rigueur, Confiance, Performance — guide notre action quotidienne. Ce nouveau portail web s'inscrit dans notre volonté de rapprocher la SNR des usagers et de faciliter l'accès à nos services.
 
-Ensemble, construisons une SNR plus performante, plus proche des citoyens et pleinement tournée vers l'avenir numérique du Sénégal.`,
+Ensemble, construisons une SNR plus efficace, plus proche des citoyens et pleinement tournée vers l'avenir.`,
 };
