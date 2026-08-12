@@ -109,7 +109,7 @@ export function Header() {
 
           <Link
             href="#contact"
-            className="hidden rounded-xl bg-snr-blue-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-snr-blue-600 lg:block"
+            className="hidden rounded-xl bg-snr-gold-500 px-5 py-2.5 text-sm font-semibold text-snr-blue-900 shadow-md shadow-snr-gold-500/20 transition hover:bg-snr-gold-400 lg:block"
           >
             E-Services
           </Link>
@@ -147,7 +147,7 @@ export function Header() {
                 <Link
                   href="#contact"
                   onClick={() => setIsOpen(false)}
-                  className="mt-2 block rounded-xl bg-snr-blue-500 px-4 py-3 text-center text-sm font-semibold text-white"
+                  className="mt-2 block rounded-xl bg-snr-gold-500 px-4 py-3 text-center text-sm font-semibold text-snr-blue-900"
                 >
                   E-Services
                 </Link>

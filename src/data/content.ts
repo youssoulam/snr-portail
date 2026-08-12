@@ -111,6 +111,33 @@ export const stats: Stat[] = [
   { label: "Agents mobilisés", value: "450", suffix: "+" },
 ];
 
+export const quickAccessLinks = [
+  {
+    label: "Attestations",
+    desc: "Demande en ligne",
+    href: "#contact",
+    icon: "FileCheck",
+  },
+  {
+    label: "Immeubles",
+    desc: "Vente & location",
+    href: "#immeubles",
+    icon: "Building2",
+  },
+  {
+    label: "Documents",
+    desc: "Téléchargements",
+    href: "#documents",
+    icon: "FolderOpen",
+  },
+  {
+    label: "Contact",
+    desc: "Nous joindre",
+    href: "#contact",
+    icon: "Phone",
+  },
+];
+
 export const heroSlides = [
   {
     id: "1",

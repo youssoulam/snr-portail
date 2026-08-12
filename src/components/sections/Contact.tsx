@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, MapPin, Phone, Mail, Clock, CheckCircle } from "lucide-react";
 import { siteConfig } from "@/data/content";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -15,23 +16,18 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-gray-50 py-24">
+    <section id="contact" className="relative bg-gray-50 py-28">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-snr-gold-500/40 to-transparent" />
       <div className="mx-auto max-w-7xl px-6">
-        <div className="text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider text-snr-blue-600">
-            Contact
-          </span>
-          <h2 className="mt-3 font-display text-3xl font-bold text-gray-900 sm:text-4xl">
-            Nous joindre
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-gray-600">
-            Prenez contact avec la Société Nationale de Recouvrement. Notre
-            équipe vous répondra dans les meilleurs délais.
-          </p>
+        <div className="flex flex-col items-center">
+          <SectionHeader
+            label="Contact"
+            title="Nous joindre"
+            description="Prenez contact avec la Société Nationale de Recouvrement. Notre équipe vous répondra dans les meilleurs délais."
+          />
         </div>
 
         <div className="mt-16 grid gap-12 lg:grid-cols-5">
-          {/* Info */}
           <div className="space-y-6 lg:col-span-2">
             {[
               {
@@ -56,17 +52,24 @@ export function ContactSection() {
                 title: "Horaires",
                 content: "Lun — Ven : 8h00 — 17h00",
               },
-            ].map((item) => (
-              <div key={item.title} className="flex gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-snr-blue-100 text-snr-blue-600">
+            ].map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, x: -16 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="flex gap-4 rounded-2xl border border-gray-100 bg-white p-5 shadow-sm"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-snr-blue-500 text-white">
                   <item.icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900">{item.title}</p>
+                  <p className="font-semibold text-snr-blue-500">{item.title}</p>
                   {item.href ? (
                     <a
                       href={item.href}
-                      className="text-sm text-gray-600 transition hover:text-snr-blue-600"
+                      className="text-sm text-gray-600 transition hover:text-snr-gold-600"
                     >
                       {item.content}
                     </a>
@@ -74,32 +77,33 @@ export function ContactSection() {
                     <p className="text-sm text-gray-600">{item.content}</p>
                   )}
                 </div>
-              </div>
+              </motion.div>
             ))}
 
-            {/* Map placeholder */}
-            <div className="mt-8 overflow-hidden rounded-2xl bg-snr-blue-100">
-              <div className="flex h-48 items-center justify-center text-snr-blue-600">
+            <div className="overflow-hidden rounded-2xl border border-snr-blue-100 bg-snr-blue-500">
+              <div className="flex h-44 items-center justify-center text-white">
                 <div className="text-center">
-                  <MapPin className="mx-auto h-8 w-8" />
+                  <MapPin className="mx-auto h-8 w-8 text-snr-gold-400" />
                   <p className="mt-2 text-sm font-medium">Carte interactive</p>
-                  <p className="text-xs text-snr-blue-500">Dakar, Sénégal</p>
+                  <p className="text-xs text-white/70">Dakar, Sénégal</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Form */}
           <motion.form
             onSubmit={handleSubmit}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-2xl bg-white p-8 shadow-sm lg:col-span-3"
+            className="rounded-3xl border border-gray-100 bg-white p-8 shadow-lg lg:col-span-3"
           >
-            <h3 className="text-xl font-bold text-gray-900">
+            <h3 className="text-xl font-bold text-snr-blue-500">
               Envoyez-nous un message
             </h3>
+            <p className="mt-1 text-sm text-gray-500">
+              Formulaire de contact — démonstration prototype
+            </p>
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
               <div>
                 <label className="mb-1.5 block text-sm font-medium text-gray-700">
@@ -160,7 +164,7 @@ export function ContactSection() {
             <button
               type="submit"
               disabled={submitted}
-              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-snr-blue-500 py-4 font-semibold text-white transition hover:bg-snr-blue-600 disabled:bg-snr-blue-400 sm:w-auto sm:px-8"
+              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-snr-gold-500 py-4 font-semibold text-snr-blue-900 transition hover:bg-snr-gold-400 disabled:opacity-70 sm:w-auto sm:px-8"
             >
               {submitted ? (
                 <>
