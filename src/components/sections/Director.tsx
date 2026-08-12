@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 import { dgMessage, formerDirectors, siteConfig } from "@/data/content";
+import { PremiumImage } from "@/components/ui/PremiumImage";
 
 export function DirectorSection() {
   return (
@@ -24,12 +24,13 @@ export function DirectorSection() {
             </h2>
 
             <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-              <div className="relative aspect-[3/4] w-full bg-snr-blue-700">
-                <Image
+              <div className="relative aspect-[3/4] w-full bg-gradient-to-b from-white to-snr-blue-100">
+                <PremiumImage
                   src={dgMessage.photo}
                   alt={`Portrait officiel de ${dgMessage.name}, Directeur Général de la SNR`}
                   fill
-                  className="object-cover object-center"
+                  fit="contain"
+                  focal="top center"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
                 />
