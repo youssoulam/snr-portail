@@ -1,12 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Shield, TrendingUp, Users, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { siteConfig } from "@/data/content";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { BrandBackdrop } from "@/components/ui/BrandBackdrop";
-import { SnrLogo } from "@/components/ui/SnrLogo";
 
 export { HeroSlider } from "./HeroSlider";
 
@@ -62,33 +61,24 @@ export function AboutSection() {
             </Link>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-snr-blue-500/15">
-              <div className="relative aspect-[4/3]">
-                <BrandBackdrop variant="institutional" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-10">
-                  <SnrLogo height={72} className="brightness-0 invert drop-shadow-lg" />
-                  <p className="mt-6 text-center text-sm font-bold uppercase tracking-[0.3em] text-snr-gold-400">
-                    {siteConfig.baseline}
-                  </p>
-                  <p className="mt-3 max-w-xs text-center text-sm text-white/70">
-                    Société d&apos;État — République du Sénégal
-                  </p>
-                </div>
-              </div>
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-snr-blue-500/10">
+              <Image
+                src="/images/snr-accueil-officiel.jpg"
+                alt="Siège de la SNR — Société Nationale de Recouvrement"
+                width={640}
+                height={480}
+                className="aspect-[4/3] w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-snr-blue-900/40 to-transparent" />
             </div>
-            <div className="absolute -bottom-6 -left-6 rounded-2xl border border-snr-gold-500/30 bg-white p-5 shadow-xl">
+            <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-snr-gold-500/30 bg-white p-5 shadow-xl lg:block">
               <p className="font-display text-3xl font-bold text-snr-blue-500">
                 35<span className="text-snr-gold-500">+</span>
               </p>
               <p className="text-sm text-gray-500">Années au service de l&apos;État</p>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         <div className="mt-20 grid gap-6 sm:grid-cols-3">

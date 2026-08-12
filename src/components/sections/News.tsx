@@ -1,12 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Calendar, ArrowRight } from "lucide-react";
 import { announcements } from "@/data/content";
 import { formatDate, getCategoryLabel, getCategoryColor } from "@/lib/utils";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { PremiumImage } from "@/components/ui/PremiumImage";
 
 export function NewsSection() {
   const featured = announcements[0];
@@ -38,19 +38,14 @@ export function NewsSection() {
             viewport={{ once: true }}
             className="group overflow-hidden rounded-3xl bg-white shadow-sm transition hover:shadow-xl"
           >
-            <div className="relative h-80 overflow-hidden bg-gradient-to-br from-snr-blue-100 to-snr-blue-50">
-              {featured.image && (
-                <PremiumImage
-                  src={featured.image}
-                  alt={featured.title}
-                  fill
-                  fit={featured.imageFit === "portrait" ? "contain" : "cover"}
-                  focal={featured.imageFit === "portrait" ? "top center" : "center"}
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="transition duration-700 group-hover:scale-[1.02]"
-                />
-              )}
-              <div className="absolute inset-0 bg-gradient-to-t from-snr-blue-900/50 via-transparent to-transparent" />
+            <div className="relative h-72 overflow-hidden">
+              <Image
+                src={featured.image!}
+                alt={featured.title}
+                fill
+                className="object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <span
                 className={`absolute left-5 top-5 rounded-full px-3 py-1 text-xs font-semibold ${getCategoryColor(featured.category)}`}
               >
@@ -86,22 +81,17 @@ export function NewsSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
-                className="group flex gap-5 rounded-2xl border border-gray-100 bg-white p-4 shadow-sm transition hover:border-snr-gold-400/30 hover:shadow-md"
+                className="group flex gap-5 rounded-2xl border border-gray-100 bg-white p-5 shadow-sm transition hover:border-snr-gold-400/30 hover:shadow-md"
               >
-                <div className="relative h-24 w-32 shrink-0 overflow-hidden rounded-xl bg-snr-blue-50">
-                  {item.image && (
-                    <PremiumImage
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      fit="cover"
-                      focal="center"
-                      sizes="128px"
-                      className="transition duration-500 group-hover:scale-105"
-                    />
-                  )}
+                <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-xl">
+                  <Image
+                    src={item.image!}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-110"
+                  />
                 </div>
-                <div className="min-w-0 flex-1 py-1">
+                <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-2">
                     <span
                       className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${getCategoryColor(item.category)}`}

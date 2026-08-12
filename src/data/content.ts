@@ -7,7 +7,6 @@ import type {
   Service,
   Stat,
 } from "@/types";
-import { images } from "@/lib/images";
 
 export const siteConfig = {
   name: "Société Nationale de Recouvrement",
@@ -142,52 +141,45 @@ export const quickAccessLinks = [
 export const heroSlides = [
   {
     id: "1",
-    layout: "brand" as const,
-    backdrop: "institutional" as const,
     badge: siteConfig.baseline,
     title: "Société Nationale de",
     highlight: "Recouvrement",
     description:
       "Un instrument efficace de recouvrement au service de l'État. Rigueur, confiance et performance au service des citoyens sénégalais.",
+    image: "/images/snr-accueil-officiel.jpg",
     cta: { label: "Nos services", href: "#services" },
     ctaSecondary: { label: "Mot du DG", href: "#mot-dg" },
   },
   {
     id: "2",
-    layout: "photo" as const,
-    backdrop: "patrimoine" as const,
     badge: "Patrimoine immobilier",
     title: "Immeubles proposés à la",
     highlight: "Vente & Location",
     description:
       "Retrouvez tous les biens du patrimoine de l'État actuellement disponibles, conformément aux avis publiés sur snr.gouv.sn.",
-    image: images.randonnee,
-    imageFocal: "center 40%",
+    image: "/images/avis-vente-immeubles.jpg",
     cta: { label: "Consulter les immeubles", href: "#immeubles" },
     ctaSecondary: { label: "Voir les annonces", href: "#actualites" },
   },
   {
     id: "3",
-    layout: "portrait" as const,
-    backdrop: "leadership" as const,
     badge: "Nomination — Conseil des ministres",
     title: "Pape Ibrahima",
     highlight: "SENGHOR, DG de la SNR",
     description:
       "Banquier et juriste, le nouveau Directeur général insuffle une dynamique de modernisation et de recouvrement efficace des créances publiques.",
-    image: images.dgPortrait,
+    image: "/images/dg-pape-ibrahima-senghor.png",
     cta: { label: "Lire le mot du DG", href: "#mot-dg" },
     ctaSecondary: { label: "La SNR", href: "#apropos" },
   },
   {
     id: "4",
-    layout: "brand" as const,
-    backdrop: "digital" as const,
     badge: "E-Services citoyens",
     title: "Vos démarches",
     highlight: "100% en ligne",
     description:
       "Demandez vos attestations, suivez vos dossiers de recouvrement et accédez à nos services numériques en toute simplicité.",
+    image: "/images/passation-service-snr.jpg",
     cta: { label: "Accéder aux E-Services", href: "#contact" },
     ctaSecondary: { label: "Documenthèque", href: "#documents" },
   },
@@ -201,8 +193,7 @@ export const announcements: Announcement[] = [
       "Nommé par le Président Bassirou Diomaye Faye lors du Conseil des ministres du 29 juillet 2026, il succède à Babacar NDIAYE.",
     date: "2026-07-29",
     category: "institutionnel",
-    image: images.dgPortrait,
-    imageFit: "portrait",
+    image: "/images/dg-pape-ibrahima-senghor.png",
   },
   {
     id: "2",
@@ -211,8 +202,7 @@ export const announcements: Announcement[] = [
       "Consultez la liste des immeubles du patrimoine de l'État actuellement proposés à la vente aux enchères publiques.",
     date: "2026-03-01",
     category: "vente",
-    image: images.randonnee,
-    imageFit: "landscape",
+    image: "/images/avis-vente-immeubles.jpg",
   },
   {
     id: "3",
@@ -221,8 +211,7 @@ export const announcements: Announcement[] = [
       "Cérémonie officielle de passation de service marquant une nouvelle étape dans la modernisation de la SNR.",
     date: "2026-02-15",
     category: "institutionnel",
-    image: images.donHopital,
-    imageFit: "landscape",
+    image: "/images/passation-service-snr.jpg",
   },
   {
     id: "4",
@@ -231,8 +220,7 @@ export const announcements: Announcement[] = [
       "La SNR a apporté sa contribution à l'effort national de lutte contre la pandémie de COVID-19.",
     date: "2020-06-01",
     category: "social",
-    image: images.femmesSnr,
-    imageFit: "landscape",
+    image: "/images/snr-covid19.jpg",
   },
 ];
 
@@ -244,6 +232,7 @@ export const properties: Property[] = [
     type: "vente",
     price: "Sur enchères",
     surface: "Voir avis de vente",
+    image: "/images/avis-vente-immeubles.jpg",
     featured: true,
   },
   {
@@ -253,6 +242,7 @@ export const properties: Property[] = [
     type: "location",
     price: "Sur demande",
     surface: "Variable",
+    image: "/images/snr-accueil-officiel.jpg",
     featured: true,
   },
   {
@@ -262,6 +252,7 @@ export const properties: Property[] = [
     type: "vente",
     price: "Sur enchères",
     surface: "Voir documenthèque",
+    image: "/images/passation-service-snr.jpg",
   },
   {
     id: "4",
@@ -270,6 +261,7 @@ export const properties: Property[] = [
     type: "location",
     price: "Sur demande",
     surface: "Variable",
+    image: "/images/avis-vente-immeubles.jpg",
   },
 ];
 
@@ -341,22 +333,32 @@ export const mediaGallery = [
   {
     id: "1",
     title: "Cérémonie de remise de chèque — Hôpital Diamniadio",
-    image: images.donHopital,
+    image: "/images/don-hopital-diamniadio-hd.jpg",
   },
   {
     id: "2",
     title: "Randonnée pédestre 2018 — SNR",
-    image: images.randonnee,
+    image: "/images/randonnee-2018-hd.jpg",
   },
   {
     id: "3",
     title: "Randonnée pédestre 2018 — SNR (suite)",
-    image: images.randonneeSuite,
+    image: "/images/randonnee-2018-suite-hd.jpg",
   },
   {
     id: "4",
     title: "La SNR fête ses femmes — 8 mars 2018",
-    image: images.femmesSnr,
+    image: "/images/femmes-snr-2018-hd.jpg",
+  },
+  {
+    id: "5",
+    title: "Passation de service — SNR",
+    image: "/images/passation-service-snr.jpg",
+  },
+  {
+    id: "6",
+    title: "Contribution SNR — Lutte contre le COVID-19",
+    image: "/images/snr-covid19.jpg",
   },
 ];
 
@@ -364,7 +366,7 @@ export const dgMessage = {
   name: "Pape Ibrahima SENGHOR",
   title: "Directeur Général",
   role: "Société Nationale de Recouvrement",
-  photo: images.dgPortrait,
+  photo: "/images/dg-pape-ibrahima-senghor.png",
   appointedDate: "29 juillet 2026",
   bio: "Banquier de formation et titulaire d'une Maîtrise en droit des affaires. Nommé Directeur général de la SNR par le Président Bassirou Diomaye Faye lors du Conseil des ministres du 29 juillet 2026.",
   excerpt:

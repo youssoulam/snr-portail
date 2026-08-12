@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { documents, mediaGallery } from "@/data/content";
 import { formatDate } from "@/lib/utils";
-import { PremiumImage } from "@/components/ui/PremiumImage";
+import { GalleryImage } from "@/components/ui/GalleryImage";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const docIcons = {
@@ -89,32 +89,27 @@ export function MediaSection() {
           />
         </div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2">
+        <div className="mt-14 columns-1 gap-5 sm:columns-2 lg:columns-3">
           {mediaGallery.map((item, index) => (
-            <motion.figure
+            <motion.div
               key={item.id}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.06 }}
-              className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:shadow-xl"
+              transition={{ delay: index * 0.04 }}
+              className="group relative mb-5 break-inside-avoid overflow-hidden rounded-2xl shadow-sm transition hover:shadow-xl"
             >
-              <div className="relative aspect-[16/10] overflow-hidden bg-snr-blue-50">
-                <PremiumImage
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  fit="cover"
-                  focal="center"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="transition duration-700 group-hover:scale-[1.03]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-snr-blue-900/70 via-transparent to-transparent opacity-80" />
-                <figcaption className="absolute bottom-0 left-0 right-0 p-5 text-sm font-medium text-white">
-                  {item.title}
-                </figcaption>
+              <GalleryImage
+                src={item.image}
+                alt={item.title}
+                width={600}
+                height={index % 3 === 0 ? 400 : index % 3 === 1 ? 300 : 350}
+                className="w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 flex items-end bg-gradient-to-t from-snr-blue-900/80 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100">
+                <p className="p-5 text-sm font-medium text-white">{item.title}</p>
               </div>
-            </motion.figure>
+            </motion.div>
           ))}
         </div>
       </div>

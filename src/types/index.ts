@@ -13,7 +13,6 @@ export interface Announcement {
   date: string;
   category: "vente" | "location" | "institutionnel" | "social";
   image?: string;
-  imageFit?: "portrait" | "landscape";
 }
 
 export interface Document {
@@ -31,7 +30,7 @@ export interface Property {
   type: "vente" | "location";
   price?: string;
   surface: string;
-  image?: string;
+  image: string;
   featured?: boolean;
 }
 
@@ -57,14 +56,11 @@ export interface NavItem {
 
 export interface HeroSlide {
   id: string;
-  layout: "brand" | "photo" | "portrait";
-  backdrop: "institutional" | "patrimoine" | "digital" | "leadership";
   badge: string;
   title: string;
   highlight?: string;
   description: string;
-  image?: string;
-  imageFocal?: string;
+  image: string;
   cta: { label: string; href: string };
   ctaSecondary?: { label: string; href: string };
 }
