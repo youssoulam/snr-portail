@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --snr-blue: #0072b9;
+    --snr-blue-dark: #003057;
+    --snr-gold: #ed8b1c;
+    --snr-red: #da001a;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900 antialiased;
+  }
+
+  ::selection {
+    @apply bg-snr-blue-500 text-white;
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Bande tricolore sénégalaise — accent institutionnel */
+.senegal-stripe {
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    #00853f 33.33%,
+    #fdef42 33.33% 66.66%,
+    #e31b23 66.66%
+  );
+}
